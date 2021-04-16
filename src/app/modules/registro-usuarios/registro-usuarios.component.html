@@ -1,0 +1,63 @@
+<div class="container">
+    <h4>Registro de usuarios</h4>
+    <hr>
+    <form [formGroup]="formGroup">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputIdentificacion">Numero de indentificacion</label>
+                <input type="text" class="form-control" id="inputIdentificacion">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputNombres">Nombres</label>
+                <input type="text" class="form-control" id="inputNombres">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputApellidos">Apellidos</label>
+                <input type="text" class="form-control" id="inputApellidos">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputDireccion">Direccion</label>
+                <input type="text" class="form-control" id="inputDireccion">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputTelefono">Telefeno</label>
+                <input type="text" class="form-control" id="inputTelefono">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputCiudad">Ciudad</label>
+                <select id="inputCiudad" class="form-control">
+                    <option selected>Seleccione...</option>
+                    <option>...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inpuusuario">Tipo Usuario</label>
+                <select id="inpuusuario" class="form-control">
+                    <option selected>Seleccione...</option>
+                    <option>Cliente</option>
+                    <option>Proveedor</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPass1">Contraseña</label>
+                <input type="password" class="form-control" id="inputPass1">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputPass2">Confirme contaseña</label>
+                <input type="password" class="form-control" id="inputPass2">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+</div>
