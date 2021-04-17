@@ -10,7 +10,7 @@ export class DespachosComponent implements OnInit {
   constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.toastr.success('Hello world!', 'Mensaje de notifcación!');
+    // this.toastr.success('Hello world!', 'Mensaje de notifcación!');
   }
 
 }
