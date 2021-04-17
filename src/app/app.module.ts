@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { BienvenidosComponent } from './modules/bienvenidos/bienvenidos.componen
 import { MenuComponent } from './modules/menu/menu.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Api } from './shared/api/api';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     FormsModule, 
     ReactiveFormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(
       {
@@ -34,7 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       },  
       ),
   ],
-  providers: [],
+  providers: [Api],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
