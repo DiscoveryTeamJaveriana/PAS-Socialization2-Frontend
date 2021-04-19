@@ -43,7 +43,6 @@ export class DespachosComponent implements OnInit {
       }
        
       this.despachosService.DespachoClientePost(desapacho).subscribe((data: any) => {
-        console.log(data);
         this.toastr.success('Proceso realziado exitosamente', 'Mensaje de notifcación!');
         this.getDespachos();
       });
