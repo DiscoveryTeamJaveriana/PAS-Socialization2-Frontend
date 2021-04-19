@@ -1,18 +1,22 @@
-<h4>Despachos proveedor</h4>
-
+<h4>Historial despachos clientes</h4>
+<br>
 <table class="table">
     <thead class="thead-dark">
       <tr>
         <th>Orden</th>
-        <th>Cantidad cajas</th>
+        <th>Cantidad de Cajas</th>
         <th>Peso total</th>
+        <th>Oferta</th>
+        <th>transportadora</th>
       </tr>
     </thead>
-    <tbody *ngFor="let item of lisDespachos">
+    <tbody *ngFor="let item of lisDespachos;">
       <tr>
         <th>{{item.id}}</th>
-        <td>{{item.cantidadCajas}}</td>
-        <td>{{item.pesoTotal}}</td>
+        <th>{{item.cantidadCajas}}</th>
+        <th>{{item.pesoTotal}}</th>
+        <th>{{item.mejorOferta}}</th>
+        <th>{{item.transportadora}}</th>
       </tr>
     </tbody>
   </table>
