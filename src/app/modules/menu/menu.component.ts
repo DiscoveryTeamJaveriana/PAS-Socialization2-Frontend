@@ -6,10 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-
+  
+  public isAutenticado:boolean = false;
+  public perfil : string;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
+    this.perfil = localStorage.getItem("perfil");
+    console.log(this.perfil);
+    if(this.perfil != null)
+    {
+      this.isAutenticado = true;
+    }
+
+    console.log(this.isAutenticado)
+  }
+
+  cerrarSesion()
+  {
+    localStorage.removeItem("perfil");
   }
 
 }

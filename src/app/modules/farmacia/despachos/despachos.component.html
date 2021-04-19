@@ -1,36 +1,24 @@
-<h4>Despachos</h4>
+<h4>Despachos clientes</h4>
 <br>
 <table class="table">
     <thead class="thead-dark">
       <tr>
         <th>Orden</th>
-        <th>Clinete</th>
-        <th>Cantidad de productos</th>
-        <th>Estado</th>
+        <th>Cantidad de Cajas</th>
+        <th>Peso total</th>
+        <th>Oferta</th>
+        <th>transportadora</th>
         <th>Acciones</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody *ngFor="let item of lisDespachos;">
       <tr>
-        <th>1</th>
-        <td>Oscar</td>
-        <td>4 cajas delicadas</td>
-        <td>Finalizada</td>
-        <td></td>
-      </tr>
-      <tr>
-        <th>2</th>
-        <td>Jacob</td>
-        <td>5 cajas</td>
-        <td>Aporbada</td>
-        <td></td>
-      </tr>
-      <tr>
-        <th>3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>Ingreso</td>
-        <td></td>
+        <th>{{item.id}}</th>
+        <th>{{item.cantidadCajas}}</th>
+        <th>{{item.pesoTotal}}</th>
+        <th>{{item.mejorOferta}}</th>
+        <th>{{item.transportadora}}</th>
+        <td><button type="button" class="btn btn-primary btn-sm" (click)="DespachoCliente(item);">Aceptar oferta</button></td>
       </tr>
     </tbody>
   </table>

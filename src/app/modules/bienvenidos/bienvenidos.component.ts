@@ -10,6 +10,11 @@ export class BienvenidosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    let perfil = localStorage.getItem("perfil");
+
+    if (perfil == null) {
+      document.location.href = '/';
+    }
   }
 
 }

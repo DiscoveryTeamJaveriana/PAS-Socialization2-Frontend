@@ -9,7 +9,7 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="inputNombres">Nombres <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="inputNombres" formControlName="inputIdentificacion">
+                <input type="text" class="form-control" id="inputNombres" formControlName="inputNombres">
             </div>
         </div>
 
@@ -45,11 +45,11 @@
 
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inpuusuario">Tipo Usuario <span class="text-danger">*</span></label>
-                <select id="inpuusuario" class="form-control" formControlName="inpuusuario">
+                <label for="inpuRolUsuario">Tipo Usuario <span class="text-danger">*</span></label>
+                <select id="inpuRolUsuario" class="form-control" formControlName="inpuRolUsuario">
                     <option selected>Seleccione...</option>
-                    <option value="1">Cliente</option>
-                    <option value="2">Proveedor</option>
+                    <option value="2">Cliente</option>
+                    <option value="3">Proveedor</option>
                 </select>
             </div>
             <div class="form-group col-md-6">
@@ -63,10 +63,18 @@
                 <input type="password" class="form-control" id="inputPass2" formControlName="inputPass2">
             </div>
             <div class="form-group col-md-6">
+                <label for="inputNombreusuario">NombreUsuario</label>
+                <input type="text" class="form-control" id="inputNombreusuario" formControlName="inputNombreusuario">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
                 <label for="inputCorreo">Correo</label>
                 <input type="text" class="form-control" id="inputCorreo" formControlName="inputCorreo">
             </div>
         </div>
         <button type="button" class="btn btn-primary" (click)='crearUsuarioSubmit()'>Registrar</button>
+        <a href="/" class="ml-3">Atras</a>
+        <br>
     </form>
 </div>

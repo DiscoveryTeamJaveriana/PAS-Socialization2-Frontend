@@ -7,11 +7,16 @@ import { Api } from '../../api/api';
 })
 export class UsuariosService {
 
-  constructor(private http: HttpClient,private api: Api) {
+  constructor(private http: HttpClient,
+    private api: Api) {
   }
   
    CreateUser(object : any){
     const headers = new Headers({ 'Content-Type': 'application/json' });
-    return this.api.post("/Usuario",object,  { headers: headers });
+    return this.api.post("Usuario",object,  { headers: headers });
+   }
+
+   GetUser(object : any){
+    return this.api.get('Usuario/'+ object);
    }
 }

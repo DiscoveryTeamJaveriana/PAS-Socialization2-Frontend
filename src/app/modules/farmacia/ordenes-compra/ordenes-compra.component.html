@@ -1,36 +1,49 @@
-<h4>Ordenes de comparas por ofertar</h4>
+<h4>Despachos proveedor</h4>
+
+
 <br>
+<form [formGroup]="formGroup">
 <table class="table">
     <thead class="thead-dark">
       <tr>
         <th>Orden</th>
-        <th>Clinete</th>
-        <th>Cantidad de productos</th>
-        <th>Estado</th>
-        <th></th>
+        <th>Cantidad cajas</th>
+        <th>Peso total</th>
+        <th>Acciones </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody *ngFor="let item of lisDespachos">
       <tr>
-        <th>1</th>
-        <td>Oscar</td>
-        <td>4 cajas delicadas</td>
-        <td>Finalizada</td>
-        <td></td>
-      </tr>
-      <tr>
-        <th>2</th>
-        <td>Jacob</td>
-        <td>5 cajas</td>
-        <td>Aporbada</td>
-        <td></td>
-      </tr>
-      <tr>
-        <th>3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>Ingreso</td>
-        <td></td>
+        <th>{{item.id}}</th>
+        <td>{{item.cantidadCajas}}</td>
+        <td>{{item.pesoTotal}}</td>
+        <td><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#exampleModal" (click)="setOferta(item)">
+          Ofertar
+        </button></td>
       </tr>
     </tbody>
   </table>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Realziar oferta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group col-md-12">
+            <label for="inputOferta">Valor de oferta <span class="text-danger">*</span></label>
+            <input type="number" class="form-control" id="inputOferta" formControlName="inputOferta">
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" (click)="enviarOferta()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>

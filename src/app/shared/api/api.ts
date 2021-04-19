@@ -8,9 +8,8 @@ import { Injectable, Inject } from '@angular/core';
 export class Api {
   url: string = '';
 
-
   constructor(public http: HttpClient) {
-      this.url='http://localhost:54455/';
+      this.url='http://localhost:10016/javeriana/';
   }
 
   get(endpoint: string, params?: any, reqOpts?: any) {
