@@ -29,7 +29,6 @@ export class DespachosComponent implements OnInit {
 
   getDespachos()
    {
-     
     this.despachosService.DespachoCliente(Number(localStorage.getItem("id")),).subscribe((data: any) => {
       this.lisDespachos = data;
     });
